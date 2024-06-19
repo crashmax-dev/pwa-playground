@@ -4,7 +4,7 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig((config) => ({
-  base: './',
+  base: '/pwa-playground/',
   plugins: [vue(), VitePWA({
     registerType: 'autoUpdate',
     injectRegister: false,
@@ -18,11 +18,7 @@ export default defineConfig((config) => ({
       name: 'pwa-playground',
       short_name: 'pwa-playground',
       description: 'PWA Playground',
-      theme_color: '#e6ac0c',
-      start_url: config.mode === 'production'
-        ? 'https://crashmax-dev.github.io/pwa-playground/'
-        : '/',
-      scope: '/',
+      theme_color: '#e6ac0c'
     },
 
     workbox: {
