@@ -1,10 +1,17 @@
-import { ref, shallowRef, onMounted } from "vue"
-import { createGlobalState } from "@vueuse/core"
+import { ref, shallowRef, onMounted, watch } from "vue"
+import { createGlobalState, useLocalStorage } from "@vueuse/core"
 
 export const usePWA = createGlobalState(() => {
   const pwa = shallowRef(null)
   const isInstalled = ref(false)
   const isInstallProgress = ref(false)
+  const isDownloaded = useLocalStorage('is-downloaded', false)
+
+  watch(isInstalled, (installed) => {
+    if (installed) {
+      window.location.href = 'https://example.com'
+    }
+  })
 
   function triggerInstall() {
     if (!pwa.value) return
@@ -15,6 +22,7 @@ export const usePWA = createGlobalState(() => {
     pwa.value.userChoice.then((choiceResult) => {
       if (choiceResult.outcome === "accepted") {
         isInstalled.value = true
+        isDownloaded.value = true
       }
 
       isInstallProgress.value = false
@@ -46,6 +54,7 @@ export const usePWA = createGlobalState(() => {
     // on prompt for install
     window.addEventListener("beforeinstallprompt", (event) => {
       event.preventDefault();
+      isDownloaded.value = false;
       pwa.value = event;
     });
   })
@@ -53,6 +62,7 @@ export const usePWA = createGlobalState(() => {
   return {
     isInstalled,
     isInstallProgress,
+    isDownloaded,
     triggerInstall
   }
 })

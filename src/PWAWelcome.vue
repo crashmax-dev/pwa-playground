@@ -1,5 +1,5 @@
 <template>
   <h1 class="title">
-    Welcome to PWA 🎉
+    <slot />
   </h1>
 </template>
