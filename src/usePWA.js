@@ -5,7 +5,6 @@ export const usePWA = createGlobalState(() => {
   const pwa = shallowRef(null)
   const isInstalled = ref(false)
   const isInstallProgress = ref(false)
-  const isSW = "serviceWorker" in navigator && "PushManager" in window
 
   function triggerInstall() {
     if (!pwa.value) return
@@ -52,7 +51,6 @@ export const usePWA = createGlobalState(() => {
   })
 
   return {
-    isSW,
     isInstalled,
     isInstallProgress,
     triggerInstall
