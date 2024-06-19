@@ -19,6 +19,7 @@ export default defineConfig({
       short_name: 'pwa-playground',
       description: 'PWA Playground',
       theme_color: '#e6ac0c',
+      start_url: '/',
     },
 
     workbox: {
