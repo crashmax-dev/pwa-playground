@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig((config) => ({
   base: './',
   plugins: [vue(), VitePWA({
     registerType: 'autoUpdate',
@@ -19,7 +19,9 @@ export default defineConfig({
       short_name: 'pwa-playground',
       description: 'PWA Playground',
       theme_color: '#e6ac0c',
-      start_url: 'https://crashmax-dev.github.io/pwa-playground/',
+      start_url: config.mode === 'production'
+        ? 'https://crashmax-dev.github.io/pwa-playground/'
+        : '/',
       scope: '/',
     },
 
@@ -36,4 +38,4 @@ export default defineConfig({
       type: 'module',
     },
   })],
-})
+}))
