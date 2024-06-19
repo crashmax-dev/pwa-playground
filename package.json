@@ -1,0 +1,26 @@
+{
+  "name": "pwa-playground",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vueuse/core": "10.11.0",
+    "vue": "3.4.29"
+  },
+  "devDependencies": {
+    "@vite-pwa/assets-generator": "0.2.4",
+    "@vitejs/plugin-vue": "5.0.5",
+    "vite": "5.3.1",
+    "vite-plugin-pwa": "0.20.0",
+    "workbox-window": "7.1.0"
+  },
+  "resolutions": {
+    "sharp": "0.32.6",
+    "sharp-ico": "0.1.5"
+  }
+}
