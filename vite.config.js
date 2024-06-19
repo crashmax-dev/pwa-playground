@@ -20,6 +20,7 @@ export default defineConfig({
       description: 'PWA Playground',
       theme_color: '#e6ac0c',
       start_url: '/',
+      scope: '/',
     },
 
     workbox: {
