@@ -4,7 +4,6 @@ import vue from '@vitejs/plugin-vue'
 
 // https://vitejs.dev/config/
 export default defineConfig((config) => ({
-  base: '/pwa-playground/',
   plugins: [vue(), VitePWA({
     registerType: 'autoUpdate',
     injectRegister: false,
