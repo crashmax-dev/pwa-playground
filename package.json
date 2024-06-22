@@ -4,23 +4,24 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
-    "preview": "vite preview"
+    "start": "pnpm build && pnpm preview",
+    "build": "rimraf dist && tsx build.ts",
+    "preview": "vite preview",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json}\""
   },
   "dependencies": {
     "@vueuse/core": "10.11.0",
-    "vue": "3.4.29"
+    "vue": "3.4.30"
   },
   "devDependencies": {
-    "@vite-pwa/assets-generator": "0.2.4",
+    "@crashmax/prettier-config": "5.0.2",
+    "@types/node": "20.14.8",
     "@vitejs/plugin-vue": "5.0.5",
+    "rimraf": "5.0.7",
+    "tsx": "4.15.7",
+    "typescript": "5.5.2",
     "vite": "5.3.1",
-    "vite-plugin-pwa": "0.20.0",
-    "workbox-window": "7.1.0"
-  },
-  "resolutions": {
-    "sharp": "0.32.6",
-    "sharp-ico": "0.1.5"
+    "vite-plugin-html": "3.2.2",
+    "vue-tsc": "2.0.22"
   }
 }

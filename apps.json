@@ -1,0 +1,48 @@
+{
+  "offer_url": "https://example.com",
+  "app_url": "https://play.google.com/store/apps/details?id=mu.muga.theapp",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "./blade.jpg",
+      "type": "image/jpeg",
+      "size": "624x350",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./galaxy.jpg",
+      "type": "image/jpeg",
+      "size": "1200x900",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./kratos.jpg",
+      "type": "image/jpeg",
+      "size": "1920x1080",
+      "form_factor": "wide"
+    }
+  ],
+  "content": [
+    {
+      "name": "МУГА",
+      "language_code": "ru",
+      "dir": "ltr"
+    },
+    {
+      "name": "MUGA",
+      "language_code": "en",
+      "dir": "ltr"
+    },
+    {
+      "name": "موغا",
+      "language_code": "ar",
+      "dir": "rtl"
+    }
+  ]
+}
