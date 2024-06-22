@@ -1,6 +1,6 @@
 {
   "offer_url": "https://example.com",
-  "app_url": "https://play.google.com/store/apps/details?id=mu.muga.theapp",
+  "application_url": "https://play.google.com/store/apps/details?id=mu.muga.theapp",
   "icons": [
     {
       "src": "./icon.png",

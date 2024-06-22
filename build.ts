@@ -68,7 +68,13 @@ for (const content of application.content) {
             languageCode: content.language_code,
             direction: content.dir,
             manifest: `<link rel="manifest" href="./manifest.webmanifest" />`,
-            applicationData: `<script>window.__APP__ = ${JSON.stringify(application)}</script>`
+            applicationData: `<script>window.__APP_DATA__ = {
+              "offer_url":"${application.offer_url}",
+              "app_url":"${application.application_url}?hl=${content.language_code}",
+              "icons": ${JSON.stringify(application.icons)},
+              "screenshots": ${JSON.stringify(application.screenshots)},
+              "content": ${JSON.stringify(content)}
+            };</script>`
           }
         }
       })

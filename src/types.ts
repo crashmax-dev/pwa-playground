@@ -6,6 +6,10 @@ export interface Application {
   content: ApplicationContent[]
 }
 
+export type ApplicationData = Omit<Application, 'content'> & {
+  content: ApplicationContent
+}
+
 export interface ApplicationContent {
   name: string
   dir: string

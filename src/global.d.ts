@@ -1,8 +1,8 @@
-import type { Application, BeforeInstallPromptEvent } from './types'
+import type { ApplicationData, BeforeInstallPromptEvent } from './types'
 
 declare global {
   interface Window {
-    __APP__: Application
+    __APP_DATA__: ApplicationData
   }
 
   interface WindowEventMap {
