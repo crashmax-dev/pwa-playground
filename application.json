@@ -1,0 +1,133 @@
+{
+  "tracker_settings": {
+    "geo_blacklist": ["ru", "ua"],
+    "offer_url": "https://example.com/?offer",
+    "white_url": "https://example.com/?white"
+  },
+  "vertical": {
+    "collage_template": {
+      "icon_image": {
+        "src": "./app.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      "horizontal_slider_images": [
+        {
+          "src": "./app.png",
+          "sizes": "512x512",
+          "type": "image/png"
+        }
+      ]
+    }
+  },
+  "content": [
+    {
+      "application_name": "Кэнди Смэш Мэния: Матч 3 Поп",
+      "application_developer_name": "gameone",
+      "category": "0",
+      "description": "Кэнди Смэш Мэния: Матч 3 Поп",
+      "language_code": "ru",
+      "reviews": 0,
+      "review_count": 48313,
+      "percent_per_rating": {
+        "1": 9,
+        "2": 2,
+        "3": 4,
+        "4": 9,
+        "5": 2
+      },
+      "rating": 4.3,
+      "comments": [
+        {
+          "image": "./avatar.png",
+          "author_name": "Steven Novakovich",
+          "rating": 5,
+          "likes_count": 65,
+          "date_time": 1719222796,
+          "content": "Great match 3 game. Colorful, smooth graphics and excellent features.",
+          "review": null
+        },
+        {
+          "image": "./avatar.png",
+          "author_name": "A Google user",
+          "rating": 3,
+          "likes_count": 1866,
+          "date_time": 1719222796,
+          "content": "Fun game...at first. Then there comes a point where you definitely cannot win using logic or strategy. It begins to be pretty random with not enough moves, even using every power up available. I've been stuck on lvl 343 for a while now and that's not fun at all. I love a challenge, but being stuck for days is annoying amd boring. Besides that, there's a lot of clicking to keep playing after each lvl. I counted 8 clicks once. Ugh.",
+          "review": {
+            "author_name": "gameone",
+            "date_time": 1719222796,
+            "content": "Thanks for your comment,we appreciate your insights on Candy Smash Mania.Team will optimize these in future.Thank you for your support of the game.Have a good day:)"
+          }
+        },
+        {
+          "image": "./avatar.png",
+          "author_name": "A Google user",
+          "rating": 2,
+          "likes_count": 2753,
+          "date_time": 1719222796,
+          "content": "I really enjoyed the twist of having a jigsaw puzzle to solve. The background on the map interesting and are just cutesy enough to be entertaining. The prizes on the wheel while standard have the add bonus of receiving a double bomb upon use of the bomb. So why the low rating? Here's why... Just like every game of this type I have found that it is a complete waste of time to continue playing after a certain level. It becomes ridiculously hard (im saying days and weeks) to pass a level.",
+          "review": {
+            "author_name": "gameone",
+            "date_time": 1719222796,
+            "content": "Thanks for your feedback! We deeply respect your advice, and we will try to combine your feedback with our R\\u0026D, in order to provide better products. Thanks again for your kindness."
+          }
+        }
+      ]
+    },
+    {
+      "application_name": "Candy Smash Mania: Match 3 Pop",
+      "application_developer_name": "gameone",
+      "category": "0",
+      "description": "🍬🍬Candy Smash Mania is a sweet match 3 puzzle game.🍭🍭You will act as little girls, accompany with lovely husky. 🌮Thousands of puzzle levels filled with candies and cake carefully well crafted. 🍩Enter the juicy adventure and travel through sweet house of candy treats. Match and blast three or more of the same candies to clear the levels! 🌭Make the most delicious combinations and get through challenging levels filled with candy! Blast candies together and match the rarest treats and share with your friends. 💥💥More treats are in Candy Smash Mania for you to discover in this juicy land! 🎊You would addictive in this candy treat, such as Jam, honey, sweet and biscuits treasure trove of tasty treats!🎉🌈Candy Smash Mania features:⭐ Addictive match 3 gameplay⭐ Colorful and delicious candies. ⭐ Splendid animations ⭐ Any time and anywhere with no WIFI⭐ Collect the Black or white kittens, also bees and rabbits can help you pass levels easily!⭐ Be careful with barriers: Five layers dessert, Ice layers, Biscuits stick, Honey pot, etc.🌈HOW TO PLAY:⭐ Match 3 or more same color gem jewels in order to crush them.⭐ Pass level to get enough stars and unlock the new maps.⭐ Collect rabbits and buy powerful boosters to crush candy easily.⭐ Wisely use the colorful and powerful boosters, pass the devil levels.⭐ Try to get 3 star stage clear.🎉Enjoy the tasty treats with Candy Smash Mania. Have Fun! Easy Get Started this sweet journey . Match 3 or more of the same candies to make the treat into sweet tooth!🎉Visit us:https://www.facebook.com/CandySmashMania/",
+      "language_code": "en",
+      "reviews": 0,
+      "review_count": 48313,
+      "percent_per_rating": {
+        "1": 9,
+        "2": 2,
+        "3": 4,
+        "4": 9,
+        "5": 2
+      },
+      "rating": 4.3,
+      "comments": [
+        {
+          "image": "./avatar.png",
+          "author_name": "Steven Novakovich",
+          "rating": 5,
+          "likes_count": 65,
+          "date_time": 1719222796,
+          "content": "Great match 3 game. Colorful, smooth graphics and excellent features.",
+          "review": null
+        },
+        {
+          "image": "./avatar.png",
+          "author_name": "A Google user",
+          "rating": 3,
+          "likes_count": 1866,
+          "date_time": 1719222796,
+          "content": "Fun game...at first. Then there comes a point where you definitely cannot win using logic or strategy. It begins to be pretty random with not enough moves, even using every power up available. I've been stuck on lvl 343 for a while now and that's not fun at all. I love a challenge, but being stuck for days is annoying amd boring. Besides that, there's a lot of clicking to keep playing after each lvl. I counted 8 clicks once. Ugh.",
+          "review": {
+            "author_name": "gameone",
+            "date_time": 1719222796,
+            "content": "Thanks for your comment,we appreciate your insights on Candy Smash Mania.Team will optimize these in future.Thank you for your support of the game.Have a good day:)"
+          }
+        },
+        {
+          "image": "./avatar.png",
+          "author_name": "A Google user",
+          "rating": 2,
+          "likes_count": 2753,
+          "date_time": 1719222796,
+          "content": "I really enjoyed the twist of having a jigsaw puzzle to solve. The background on the map interesting and are just cutesy enough to be entertaining. The prizes on the wheel while standard have the add bonus of receiving a double bomb upon use of the bomb. So why the low rating? Here's why... Just like every game of this type I have found that it is a complete waste of time to continue playing after a certain level. It becomes ridiculously hard (im saying days and weeks) to pass a level.",
+          "review": {
+            "author_name": "gameone",
+            "date_time": 1719222796,
+            "content": "Thanks for your feedback! We deeply respect your advice, and we will try to combine your feedback with our R\\u0026D, in order to provide better products. Thanks again for your kindness."
+          }
+        }
+      ]
+    }
+  ]
+}

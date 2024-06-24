@@ -1,60 +1,17 @@
-import { readFile, writeFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import vue from '@vitejs/plugin-vue'
 import { build } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
-import type { Application, ApplicationContent, Manifest } from './src/types'
+import { applicationGenerator } from './generator'
 
-const __dirname = fileURLToPath(new URL('.', import.meta.url))
+await applicationGenerator.loadFiles()
 
-const application = await loadJsonFile<Application>('apps')
-const manifest = await loadJsonFile<Manifest>('manifest')
-
-async function loadJsonFile<T>(file: string): Promise<T> {
-  try {
-    return JSON.parse(
-      await readFile(resolve(__dirname, file + '.json'), { encoding: 'utf-8' })
-    )
-  } catch (error) {
-    throw error
-  }
-}
-
-async function createManifest(
-  outDir: string,
-  applicationContent: ApplicationContent
-) {
-  const manifestData = { ...manifest }
-
-  manifestData.icons = application.icons
-  // google chrome has crashed :(
-  // manifestData.screenshots = application.screenshots
-
-  manifestData.name = applicationContent.name
-  manifestData.short_name = applicationContent.name
-  manifestData.lang = applicationContent.language_code
-  manifestData.dir = applicationContent.dir
-  manifestData.related_applications.push({
-    platform: 'webapp',
-    // TODO: make this configurable domain
-    url: `http://localhost:4173/${applicationContent.language_code}/index.html`
-  })
-
-  await writeFile(
-    resolve(outDir, 'manifest.webmanifest'),
-    JSON.stringify(manifestData, null, 2)
-  )
-}
-
-for (const content of application.content) {
-  const outDir = resolve(__dirname, 'dist', content.language_code)
-
+for (const content of applicationGenerator.application.content) {
   await build({
     base: './',
     build: {
-      outDir
+      outDir: applicationGenerator.getOutputPath(content.language_code)
     },
     plugins: [
       vue(),
@@ -64,17 +21,13 @@ for (const content of application.content) {
         template: 'index.html',
         inject: {
           data: {
-            title: content.name,
+            title: content.application_name,
             languageCode: content.language_code,
-            direction: content.dir,
             manifest: `<link rel="manifest" href="./manifest.webmanifest" />`,
-            applicationData: `<script>window.__APP_DATA__ = {
-              "offer_url":"${application.offer_url}",
-              "app_url":"${application.application_url}?hl=${content.language_code}",
-              "icons": ${JSON.stringify(application.icons)},
-              "screenshots": ${JSON.stringify(application.screenshots)},
-              "content": ${JSON.stringify(content)}
-            };</script>`
+            applicationData: `<script>window.__APP_DATA__ = ${JSON.stringify({
+              ...applicationGenerator.application,
+              content: content
+            })};</script>`
           }
         }
       })
@@ -87,5 +40,5 @@ for (const content of application.content) {
     }
   })
 
-  await createManifest(outDir, content)
+  await applicationGenerator.generateManifest(content)
 }

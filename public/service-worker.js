@@ -1,5 +1,8 @@
 'use strict';
 
+/**
+ * @type {Application}
+ */
 let APP_DATA = null
 
 self.addEventListener('activate', (event) => {
